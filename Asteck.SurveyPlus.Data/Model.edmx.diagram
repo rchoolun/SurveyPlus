@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d3d34e64696f438c8917ee9a0fbc70fd" Name="Diagram1">
+        <EntityTypeShape EntityType="SurveyPlusModel.Answer" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="SurveyPlusModel.Question" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SurveyPlusModel.QuestionAnswer" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SurveyPlusModel.Questionnaire" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SurveyPlusModel.QuestionnaireQuestion" Width="1.625" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SurveyPlusModel.Result" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SurveyPlusModel.User" Width="1.5" PointX="3.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SurveyPlusModel.UserProfile" Width="1.5" PointX="11" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SurveyPlusModel.UserQuestionnaire" Width="1.5" PointX="9" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SurveyPlusModel.webpages_Membership" Width="1.5" PointX="5.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SurveyPlusModel.webpages_OAuthMembership" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SurveyPlusModel.webpages_Roles" Width="1.5" PointX="8.75" PointY="2" IsExpanded="true" />
+        <AssociationConnector Association="SurveyPlusModel.FK_QuestionAnswer_Answer" ManuallyRouted="false" />
+        <AssociationConnector Association="SurveyPlusModel.FK_Result_Answer" ManuallyRouted="false" />
+        <AssociationConnector Association="SurveyPlusModel.FK_QuestionAnswer_Question" ManuallyRouted="false" />
+        <AssociationConnector Association="SurveyPlusModel.FK_QuestionnaireQuestion_Question" ManuallyRouted="false" />
+        <AssociationConnector Association="SurveyPlusModel.FK_Result_Question" ManuallyRouted="false" />
+        <AssociationConnector Association="SurveyPlusModel.FK_QuestionnaireQuestion_Questionnaire" ManuallyRouted="false" />
+        <AssociationConnector Association="SurveyPlusModel.FK_Result_Questionnaire" ManuallyRouted="false" />
+        <AssociationConnector Association="SurveyPlusModel.FK_UserQuestionnaire_Questionnaire" ManuallyRouted="false" />
+        <AssociationConnector Association="SurveyPlusModel.FK_Result_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SurveyPlusModel.FK_UserQuestionnaire_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SurveyPlusModel.webpages_UsersInRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

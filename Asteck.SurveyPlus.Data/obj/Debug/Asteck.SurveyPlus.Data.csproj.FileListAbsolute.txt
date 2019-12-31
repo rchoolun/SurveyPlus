@@ -1,0 +1,12 @@
+C:\Users\ravish.kumar.choolun\source\repos\Asteck.SurveyPlus\Asteck.SurveyPlus.Data\bin\Debug\Asteck.SurveyPlus.Data.dll.config
+C:\Users\ravish.kumar.choolun\source\repos\Asteck.SurveyPlus\Asteck.SurveyPlus.Data\bin\Debug\Asteck.SurveyPlus.Data.dll
+C:\Users\ravish.kumar.choolun\source\repos\Asteck.SurveyPlus\Asteck.SurveyPlus.Data\bin\Debug\Asteck.SurveyPlus.Data.pdb
+C:\Users\ravish.kumar.choolun\source\repos\Asteck.SurveyPlus\Asteck.SurveyPlus.Data\bin\Debug\EntityFramework.dll
+C:\Users\ravish.kumar.choolun\source\repos\Asteck.SurveyPlus\Asteck.SurveyPlus.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ravish.kumar.choolun\source\repos\Asteck.SurveyPlus\Asteck.SurveyPlus.Data\bin\Debug\EntityFramework.xml
+C:\Users\ravish.kumar.choolun\source\repos\Asteck.SurveyPlus\Asteck.SurveyPlus.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ravish.kumar.choolun\source\repos\Asteck.SurveyPlus\Asteck.SurveyPlus.Data\obj\Debug\Asteck.SurveyPlus.Data.csproj.CoreCompileInputs.cache
+C:\Users\ravish.kumar.choolun\source\repos\Asteck.SurveyPlus\Asteck.SurveyPlus.Data\obj\Debug\Asteck.SurveyPlus.Data.csproj.CopyComplete
+C:\Users\ravish.kumar.choolun\source\repos\Asteck.SurveyPlus\Asteck.SurveyPlus.Data\obj\Debug\Asteck.SurveyPlus.Data.dll
+C:\Users\ravish.kumar.choolun\source\repos\Asteck.SurveyPlus\Asteck.SurveyPlus.Data\obj\Debug\Asteck.SurveyPlus.Data.pdb
+C:\Users\ravish.kumar.choolun\source\repos\Asteck.SurveyPlus\Asteck.SurveyPlus.Data\obj\Debug\Asteck.SurveyPlus.Data.csprojAssemblyReference.cache

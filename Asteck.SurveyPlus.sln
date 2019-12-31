@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asteck.SurveyPlus", "Asteck.SurveyPlus\Asteck.SurveyPlus.csproj", "{885E0200-0441-45AC-80ED-E5369A5619FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asteck.SurveyPlus.Tests", "Asteck.SurveyPlus.Tests\Asteck.SurveyPlus.Tests.csproj", "{AA7A7F43-B82A-4EF7-AF8B-AEE28B31BB56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asteck.SurveyPlus.Data", "Asteck.SurveyPlus.Data\Asteck.SurveyPlus.Data.csproj", "{615DDB52-7B4A-4C9C-A9E1-DE32BFAF1CDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asteck.SurveyPlus.Service", "Asteck.SurveyPlus.Service\Asteck.SurveyPlus.Service.csproj", "{584D5BFA-FED0-44D7-BBBE-D13B482089F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Data", "0.Data", "{7B92EB53-7948-4CAB-A350-6DB8BDF88C91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Business", "1.Business", "{ECCF2FC0-690B-4DE4-83A4-76E5FEB72F7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Service", "2.Service", "{71E7B5CE-1C97-458D-BD35-8784225774A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.WebApp", "3.WebApp", "{27575101-DBE8-44DE-8E88-BD259A08CCE7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Tests", "4.Tests", "{F084B02D-FE88-437F-B8E9-823ED0233946}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{885E0200-0441-45AC-80ED-E5369A5619FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{885E0200-0441-45AC-80ED-E5369A5619FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{885E0200-0441-45AC-80ED-E5369A5619FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{885E0200-0441-45AC-80ED-E5369A5619FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA7A7F43-B82A-4EF7-AF8B-AEE28B31BB56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7A7F43-B82A-4EF7-AF8B-AEE28B31BB56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA7A7F43-B82A-4EF7-AF8B-AEE28B31BB56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7A7F43-B82A-4EF7-AF8B-AEE28B31BB56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{615DDB52-7B4A-4C9C-A9E1-DE32BFAF1CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{615DDB52-7B4A-4C9C-A9E1-DE32BFAF1CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{615DDB52-7B4A-4C9C-A9E1-DE32BFAF1CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{615DDB52-7B4A-4C9C-A9E1-DE32BFAF1CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{584D5BFA-FED0-44D7-BBBE-D13B482089F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{584D5BFA-FED0-44D7-BBBE-D13B482089F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{584D5BFA-FED0-44D7-BBBE-D13B482089F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{584D5BFA-FED0-44D7-BBBE-D13B482089F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{885E0200-0441-45AC-80ED-E5369A5619FB} = {27575101-DBE8-44DE-8E88-BD259A08CCE7}
+		{AA7A7F43-B82A-4EF7-AF8B-AEE28B31BB56} = {F084B02D-FE88-437F-B8E9-823ED0233946}
+		{615DDB52-7B4A-4C9C-A9E1-DE32BFAF1CDF} = {7B92EB53-7948-4CAB-A350-6DB8BDF88C91}
+		{584D5BFA-FED0-44D7-BBBE-D13B482089F1} = {ECCF2FC0-690B-4DE4-83A4-76E5FEB72F7E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BB44551-9FA4-4DEF-9A3F-B4459BA1CB72}
+	EndGlobalSection
+EndGlobal

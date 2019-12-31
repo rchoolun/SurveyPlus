@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SurveyPlusModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Answer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="QuestionAnswer">
+    <Key>
+      <PropertyRef Name="QuestionId" />
+      <PropertyRef Name="AnswerId" />
+    </Key>
+    <Property Name="QuestionId" Type="int" Nullable="false" />
+    <Property Name="AnswerId" Type="int" Nullable="false" />
+    <Property Name="IsRightAnswer" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Questionnaire">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Campaign" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="QuestionnaireQuestion">
+    <Key>
+      <PropertyRef Name="QuestionnaireId" />
+      <PropertyRef Name="QuestionId" />
+    </Key>
+    <Property Name="QuestionnaireId" Type="int" Nullable="false" />
+    <Property Name="QuestionId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Result">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="QuestionnaireId" Type="int" Nullable="false" />
+    <Property Name="QuestionId" Type="int" Nullable="false" />
+    <Property Name="AnswerId" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="HashPassword" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsAdmin" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="56" Nullable="false" />
+    <Property Name="EmailId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserQuestionnaire">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="QuestionnaireId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="QuestionnaireId" Type="int" Nullable="false" />
+    <Property Name="IsComplete" Type="bit" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsConfirmed" Type="bit" />
+    <Property Name="LastPasswordFailureDate" Type="datetime" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="PasswordChangedDate" Type="datetime" />
+    <Property Name="PasswordSalt" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ProviderUserId" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_QuestionAnswer_Answer">
+    <End Role="Answer" Type="Self.Answer" Multiplicity="1" />
+    <End Role="QuestionAnswer" Type="Self.QuestionAnswer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Answer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="QuestionAnswer">
+        <PropertyRef Name="AnswerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QuestionAnswer_Question">
+    <End Role="Question" Type="Self.Question" Multiplicity="1" />
+    <End Role="QuestionAnswer" Type="Self.QuestionAnswer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="QuestionAnswer">
+        <PropertyRef Name="QuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QuestionnaireQuestion_Question">
+    <End Role="Question" Type="Self.Question" Multiplicity="1" />
+    <End Role="QuestionnaireQuestion" Type="Self.QuestionnaireQuestion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="QuestionnaireQuestion">
+        <PropertyRef Name="QuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QuestionnaireQuestion_Questionnaire">
+    <End Role="Questionnaire" Type="Self.Questionnaire" Multiplicity="1" />
+    <End Role="QuestionnaireQuestion" Type="Self.QuestionnaireQuestion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Questionnaire">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="QuestionnaireQuestion">
+        <PropertyRef Name="QuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Result_Answer">
+    <End Role="Answer" Type="Self.Answer" Multiplicity="1" />
+    <End Role="Result" Type="Self.Result" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Answer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Result">
+        <PropertyRef Name="AnswerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Result_Question">
+    <End Role="Question" Type="Self.Question" Multiplicity="1" />
+    <End Role="Result" Type="Self.Result" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Result">
+        <PropertyRef Name="QuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Result_Questionnaire">
+    <End Role="Questionnaire" Type="Self.Questionnaire" Multiplicity="1" />
+    <End Role="Result" Type="Self.Result" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Questionnaire">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Result">
+        <PropertyRef Name="QuestionnaireId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Result_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Result" Type="Self.Result" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Result">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RoleId">
+    <End Role="webpages_Roles" Type="Self.webpages_Roles" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="Self.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserId">
+    <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="Self.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserQuestionnaire_Questionnaire">
+    <End Role="Questionnaire" Type="Self.Questionnaire" Multiplicity="1" />
+    <End Role="UserQuestionnaire" Type="Self.UserQuestionnaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Questionnaire">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserQuestionnaire">
+        <PropertyRef Name="QuestionnaireId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserQuestionnaire_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserQuestionnaire" Type="Self.UserQuestionnaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserQuestionnaire">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SurveyPlusModelStoreContainer">
+    <EntitySet Name="Answer" EntityType="Self.Answer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Question" EntityType="Self.Question" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuestionAnswer" EntityType="Self.QuestionAnswer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Questionnaire" EntityType="Self.Questionnaire" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuestionnaireQuestion" EntityType="Self.QuestionnaireQuestion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Result" EntityType="Self.Result" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserProfile" EntityType="Self.UserProfile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserQuestionnaire" EntityType="Self.UserQuestionnaire" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="webpages_Membership" EntityType="Self.webpages_Membership" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="Self.webpages_OAuthMembership" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="webpages_Roles" EntityType="Self.webpages_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="webpages_UsersInRoles" EntityType="Self.webpages_UsersInRoles" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_QuestionAnswer_Answer" Association="Self.FK_QuestionAnswer_Answer">
+      <End Role="Answer" EntitySet="Answer" />
+      <End Role="QuestionAnswer" EntitySet="QuestionAnswer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QuestionAnswer_Question" Association="Self.FK_QuestionAnswer_Question">
+      <End Role="Question" EntitySet="Question" />
+      <End Role="QuestionAnswer" EntitySet="QuestionAnswer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QuestionnaireQuestion_Question" Association="Self.FK_QuestionnaireQuestion_Question">
+      <End Role="Question" EntitySet="Question" />
+      <End Role="QuestionnaireQuestion" EntitySet="QuestionnaireQuestion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QuestionnaireQuestion_Questionnaire" Association="Self.FK_QuestionnaireQuestion_Questionnaire">
+      <End Role="Questionnaire" EntitySet="Questionnaire" />
+      <End Role="QuestionnaireQuestion" EntitySet="QuestionnaireQuestion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Result_Answer" Association="Self.FK_Result_Answer">
+      <End Role="Answer" EntitySet="Answer" />
+      <End Role="Result" EntitySet="Result" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Result_Question" Association="Self.FK_Result_Question">
+      <End Role="Question" EntitySet="Question" />
+      <End Role="Result" EntitySet="Result" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Result_Questionnaire" Association="Self.FK_Result_Questionnaire">
+      <End Role="Questionnaire" EntitySet="Questionnaire" />
+      <End Role="Result" EntitySet="Result" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Result_User" Association="Self.FK_Result_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Result" EntitySet="Result" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RoleId" Association="Self.fk_RoleId">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserId" Association="Self.fk_UserId">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserQuestionnaire_Questionnaire" Association="Self.FK_UserQuestionnaire_Questionnaire">
+      <End Role="Questionnaire" EntitySet="Questionnaire" />
+      <End Role="UserQuestionnaire" EntitySet="UserQuestionnaire" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserQuestionnaire_User" Association="Self.FK_UserQuestionnaire_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserQuestionnaire" EntitySet="UserQuestionnaire" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

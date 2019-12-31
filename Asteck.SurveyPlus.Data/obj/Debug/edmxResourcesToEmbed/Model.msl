@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SurveyPlusModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Answers">
+      <EntityTypeMapping TypeName="SurveyPlusModel.Answer">
+        <MappingFragment StoreEntitySet="Answer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="SurveyPlusModel.Question">
+        <MappingFragment StoreEntitySet="Question">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestionAnswers">
+      <EntityTypeMapping TypeName="SurveyPlusModel.QuestionAnswer">
+        <MappingFragment StoreEntitySet="QuestionAnswer">
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="AnswerId" ColumnName="AnswerId" />
+          <ScalarProperty Name="IsRightAnswer" ColumnName="IsRightAnswer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questionnaires">
+      <EntityTypeMapping TypeName="SurveyPlusModel.Questionnaire">
+        <MappingFragment StoreEntitySet="Questionnaire">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestionnaireQuestions">
+      <EntityTypeMapping TypeName="SurveyPlusModel.QuestionnaireQuestion">
+        <MappingFragment StoreEntitySet="QuestionnaireQuestion">
+          <ScalarProperty Name="QuestionnaireId" ColumnName="QuestionnaireId" />
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Results">
+      <EntityTypeMapping TypeName="SurveyPlusModel.Result">
+        <MappingFragment StoreEntitySet="Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="QuestionnaireId" ColumnName="QuestionnaireId" />
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="AnswerId" ColumnName="AnswerId" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="SurveyPlusModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="HashPassword" ColumnName="HashPassword" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserProfiles">
+      <EntityTypeMapping TypeName="SurveyPlusModel.UserProfile">
+        <MappingFragment StoreEntitySet="UserProfile">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserQuestionnaires">
+      <EntityTypeMapping TypeName="SurveyPlusModel.UserQuestionnaire">
+        <MappingFragment StoreEntitySet="UserQuestionnaire">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="QuestionnaireId" ColumnName="QuestionnaireId" />
+          <ScalarProperty Name="IsComplete" ColumnName="IsComplete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_Membership">
+      <EntityTypeMapping TypeName="SurveyPlusModel.webpages_Membership">
+        <MappingFragment StoreEntitySet="webpages_Membership">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ConfirmationToken" ColumnName="ConfirmationToken" />
+          <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+          <ScalarProperty Name="LastPasswordFailureDate" ColumnName="LastPasswordFailureDate" />
+          <ScalarProperty Name="PasswordFailuresSinceLastSuccess" ColumnName="PasswordFailuresSinceLastSuccess" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordChangedDate" ColumnName="PasswordChangedDate" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="PasswordVerificationToken" ColumnName="PasswordVerificationToken" />
+          <ScalarProperty Name="PasswordVerificationTokenExpirationDate" ColumnName="PasswordVerificationTokenExpirationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_OAuthMembership">
+      <EntityTypeMapping TypeName="SurveyPlusModel.webpages_OAuthMembership">
+        <MappingFragment StoreEntitySet="webpages_OAuthMembership">
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+          <ScalarProperty Name="ProviderUserId" ColumnName="ProviderUserId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_Roles">
+      <EntityTypeMapping TypeName="SurveyPlusModel.webpages_Roles">
+        <MappingFragment StoreEntitySet="webpages_Roles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="webpages_UsersInRoles" TypeName="SurveyPlusModel.webpages_UsersInRoles" StoreEntitySet="webpages_UsersInRoles">
+      <EndProperty Name="webpages_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="UserProfile">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
